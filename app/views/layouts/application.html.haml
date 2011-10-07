@@ -8,5 +8,5 @@
   %body
     %ul{class: navigation.current_selector}
       - navigation.items.each do |item|
-        %li{class: item.selector}= item.text
+        %li{class: item.selector}= link_to item.text, item
     = yield

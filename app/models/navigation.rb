@@ -1,16 +1,11 @@
-require 'ostruct'
-
-class Navigation
+class Navigation < Struct.new(:page)
 
   def current_selector
-    "first"
+    page.selector
   end
 
   def items
-    [
-      { selector: 'first' , text: 'first'  },
-      { selector: 'second', text: 'second' }
-    ].map &OpenStruct.method(:new)
+    Page.all
   end
 
 end
