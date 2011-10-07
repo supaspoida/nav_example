@@ -9,7 +9,7 @@ class Navigation < Struct.new(:page)
   end
 
   def items
-    Page.all
+    Page.primary
   end
 
 end

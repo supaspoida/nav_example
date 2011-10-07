@@ -1,8 +1,14 @@
 $selectors: <%= Navigation.selectors %>
 
+=active
+  background-color: blue
+  &, a
+    color: red
+
 @each $selector in $selectors
   ul.#{$selector}
     li.#{$selector}
-      background-color: blue
-      &, a
-        color: red
+      +active
+
+ul li.active
+  +active

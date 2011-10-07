@@ -16,6 +16,14 @@ class Page
     ].map &method(:new)
   end
 
+  def self.primary
+    all[0..2]
+  end
+
+  def self.secondary
+    all[3..-1]
+  end
+
   def self.find(selector)
     all.detect { |p| p.selector == selector }
   end

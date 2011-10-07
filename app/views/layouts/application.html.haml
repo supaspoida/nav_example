@@ -9,4 +9,8 @@
     %ul{class: navigation.current_selector}
       - navigation.items.each do |item|
         %li{class: item.selector}= link_to item.text, item
+    %ul
+      - secondary_navigation.items.each do |item|
+        %li{class: item.selector}= link_to item.text, item.item
+
     = yield
