@@ -6,4 +6,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+    %ul{class: navigation.current_selector}
+      - navigation.items.each do |item|
+        %li{class: item.selector}= item.text
     = yield
