@@ -9,7 +9,10 @@ class Page
     [
       { selector: 'first' , text: 'first'  },
       { selector: 'second', text: 'second' },
-      { selector: 'third' , text: 'third'  }
+      { selector: 'third' , text: 'third'  },
+      { selector: 'fourth', text: 'fourth' },
+      { selector: 'fifth' , text: 'fifth'  },
+      { selector: 'sixth' , text: 'sixth'  }
     ].map &method(:new)
   end
 
